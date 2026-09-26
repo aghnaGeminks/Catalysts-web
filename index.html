@@ -1,0 +1,146 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Production-ready Minecraft builds and maps, made in-house and documented for real projects." />
+        <meta name="theme-color" content="#0b0c0f" />
+        <meta property="og:title" content="Catalysts Build | Minecraft Builds and Maps" />
+        <meta property="og:description" content="Production-ready Minecraft builds and maps, made in-house and documented for real projects." />
+        <meta property="og:type" content="website" />
+        <link rel="icon" type="image/png" href="KATALISs.png" />
+        <title>Catalysts Build | Minecraft Builds and Maps</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="page-transition.js" defer></script>
+    </head>
+    <body data-page="home">
+        <div class="page-loader" role="status" aria-label="Loading page">
+            <img src="KATALISs.png" alt="" />
+            <span class="page-loader-spinner" aria-hidden="true"></span>
+        </div>
+        <!-- NAVIGATION BAR -->
+        <div class="container-navbar" id="home">
+            <div class="navbar-brand">
+                <img src="KATALIS.png" alt="Catalysts Build Logo" class="logo-img" />
+            </div>
+            <ul class="ul-navbar">
+                <li class="lu-navbar"><a href="index.html">Home</a></li>
+                <li class="lu-navbar"><a href="./About.html">About</a></li>
+                <li class="lu-navbar"><a href="index.html#showcase">Products</a></li>
+            </ul>
+            <button class="navbar-cart" type="button" aria-label="Open product cart" aria-expanded="false"><span aria-hidden="true">&#128722;</span><span class="cart-count" aria-label="0 items">0</span></button>
+        </div>
+        <div class="cart-backdrop" hidden></div>
+        <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+            <div class="cart-panel-header"><h2 id="cart-title">Your Cart</h2><button class="cart-close" type="button" aria-label="Close cart">&#10005;</button></div>
+            <div class="cart-items"></div>
+            <div class="cart-total"><span>Total</span><strong>$0.00</strong><button class="cart-checkout" type="button" disabled>BUY</button></div>
+        </div>
+        <!-- NAVIGATION BAR END -->
+        
+        <!-- CONTENT 1 -->
+        <div class="hero">
+            <div class="hero-scene">
+                <img src="Dignan.png" alt="Minecraft Player" class="hero-image" />
+                <div class="hero-text">
+                    <h1 class="hero-title">MINECRAFT</h1>
+                    <h2 class="hero-title">BUILDING STUFF</h2>
+                    <p class="hero-subtitle">Production-ready builds, maps. Built in-house, versioned and documented for real projects.</p>
+                </div>
+            </div>
+        </div>
+        <!-- CONTENT 1 END -->
+
+        <section class="showcase-section" id="showcase">
+            <div class="showcase-track">
+                <div class="showcase-item"><img src="Cyberpang.png" alt="Cyberpang build" /></div>
+                <div class="showcase-item"><img src="float.png" alt="Float build" /></div>
+                <div class="showcase-item"><img src="lobby.png" alt="Lobby build" /></div>
+                <div class="showcase-item"><img src="Trops.png" alt="Trops build" /></div>
+                <div class="showcase-item"><img src="Cyberpang.png" alt="Cyberpang build" /></div>
+                <div class="showcase-item"><img src="float.png" alt="Float build" /></div>
+                <div class="showcase-item"><img src="lobby.png" alt="Lobby build" /></div>
+                <div class="showcase-item"><img src="Trops.png" alt="Trops build" /></div>
+            </div>
+            <div class="product-area">
+                <h2 class="product-title">CATALYSTS PRODUCT</h2>
+                <div class="build-catalog">
+                <article class="build-card">
+                    <img src="Cyberpang.png" alt="Cyberpang City build" />
+                    <div class="build-card-info"><h3>Cyberpang City</h3><span>256 x 256</span><strong>$24.99</strong><p aria-label="Rated 4.9 out of 5">&#9733; 4.9 <small>(38)</small></p><button class="buy-button" type="button" data-product="Cyberpang City" data-price="24.99" data-image="Cyberpang.png"><span aria-hidden="true">&#128722;</span> ADD TO CART</button></div>
+                </article>
+                <article class="build-card">
+                    <img src="float.png" alt="Float Islands build" />
+                    <div class="build-card-info"><h3>Float Islands</h3><span>192 x 192</span><strong>$18.50</strong><p aria-label="Rated 4.8 out of 5">&#9733; 4.8 <small>(24)</small></p><button class="buy-button" type="button" data-product="Float Islands" data-price="18.50" data-image="float.png"><span aria-hidden="true">&#128722;</span> ADD TO CART</button></div>
+                </article>
+                <article class="build-card">
+                    <img src="lobby.png" alt="Neon Lobby build" />
+                    <div class="build-card-info"><h3>Neon Lobby</h3><span>128 x 128</span><strong>$12.00</strong><p aria-label="Rated 4.7 out of 5">&#9733; 4.7 <small>(19)</small></p><button class="buy-button" type="button" data-product="Neon Lobby" data-price="12.00" data-image="lobby.png"><span aria-hidden="true">&#128722;</span> ADD TO CART</button></div>
+                </article>
+                <article class="build-card">
+                    <img src="Trops.png" alt="Trops Arena build" />
+                    <div class="build-card-info"><h3>Trops Arena</h3><span>300 x 300</span><strong>$29.00</strong><p aria-label="Rated 5 out of 5">&#9733; 5.0 <small>(41)</small></p><button class="buy-button" type="button" data-product="Trops Arena" data-price="29.00" data-image="Trops.png"><span aria-hidden="true">&#128722;</span> ADD TO CART</button></div>
+                </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-main">
+                    <section class="footer-brand" id="about">
+                        <a class="footer-brand-name" href="#home">
+                            <img src="KATALISs.png" alt="" class="footer-logo" />
+                            <span>CATALYSTS BUILD</span>
+                        </a>
+                        <p class="footer-description">Production-ready Minecraft builds and maps, made in-house, versioned, and documented for real projects.</p>
+                        <form class="footer-newsletter" action="#" method="get">
+                            <label class="visually-hidden" for="footer-email">Email address</label>
+                            <input id="footer-email" name="email" type="email" placeholder="you@example.com" required />
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <div class="footer-socials" aria-label="Community links">
+                            <span>Discord</span>
+                            <span>YouTube</span>
+                            <span>Portfolio</span>
+                        </div>
+                    </section>
+
+                    <nav class="footer-link-group" aria-label="Build catalogue">
+                        <h2>CATALOGUE</h2>
+                        <a href="#showcase">All Builds</a>
+                        <a href="#showcase">Minecraft Maps</a>
+                        <a href="#showcase">Featured Work</a>
+                    </nav>
+
+                    <nav class="footer-link-group" aria-label="Studio information">
+                        <h2>STUDIO</h2>
+                        <a href="#about">About Us</a>
+                        <a href="#about">Our Process</a>
+                        <a href="#showcase">Portfolio</a>
+                    </nav>
+
+                    <nav class="footer-link-group" aria-label="Community and support">
+                        <h2>COMMUNITY</h2>
+                        <a href="#showcase">Latest Builds</a>
+                        <a href="#about">Project Information</a>
+                        <a href="#about">Get in Touch</a>
+                    </nav>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-legal-copy">
+                        <p>&copy; 2026 Catalysts Build. All rights reserved.</p>
+                        <p>Minecraft is a trademark of Mojang Studios. This is an independent fan-made project.</p>
+                    </div>
+                    <div class="footer-legal-links">
+                        <a href="#about">Terms</a>
+                        <a href="#about">Privacy</a>
+                        <span>Independent studio</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+    </body>
+</html>
