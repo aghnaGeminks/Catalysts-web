@@ -127,7 +127,7 @@ document.addEventListener("click", (event) => {
         return;
     }
 
-    if (event.target.closest(".cart-backdrop")) {
+    if (event.target === cartBackdrop) {
         setCartOpen(false);
         return;
     }
