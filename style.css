@@ -718,14 +718,19 @@ body::after {
 }
 
 .build-catalog {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 18px;
     width: min(1060px, calc(100% - 40px));
     margin: 34px auto 0;
 }
 
 .build-card {
+    min-width: 0;
+    flex: 0 1 calc((100% - 54px) / 4);
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 0;
     overflow: hidden;
@@ -754,14 +759,16 @@ body::after {
 }
 
 .build-card-info {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 7px 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 128px;
     padding: 13px 14px 12px;
 }
 
 .build-card-info h3 {
-    grid-column: 1 / -1;
+    min-height: 2.4em;
     margin: 0;
     font-size: 15px;
 }
@@ -771,17 +778,27 @@ body::after {
     font-size: 11px;
 }
 
-.build-card-info strong {
-    color: #9ee6c1;
-    font-size: 13px;
-}
-
 .build-card-info p {
-    grid-column: 1 / -1;
     margin: 0;
     color: #ffd166;
     font-size: 12px;
     font-weight: 700;
+}
+
+.commissioned-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 9px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: #343b3f;
+    color: #d5dadd;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
 .buy-button {
@@ -1477,8 +1494,11 @@ body::after {
     }
 
     .build-catalog {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
+    }
+
+    .build-card {
+        flex-basis: calc((100% - 12px) / 2);
     }
 
     .build-card img {
