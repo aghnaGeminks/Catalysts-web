@@ -659,7 +659,7 @@ body::after {
 .showcase-section {
     width: 100%;
     overflow: hidden;
-    padding: 30px 0 40px;
+    padding: 30px 20px 40px;
     position: relative;
     background-color: rgba(128, 128, 128, 0.45);
 }
@@ -667,9 +667,14 @@ body::after {
 .showcase-track {
     display: flex;
     width: max-content;
-    gap: 22px;
     animation: marquee 20s linear infinite;
-    padding: 0 20px;
+}
+
+.showcase-group {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 22px;
+    padding-right: 22px;
 }
 
 .showcase-item {
@@ -928,6 +933,39 @@ body::after {
     font-size: 11px;
 }
 
+.navbar-discord-link {
+    position: absolute;
+    top: 50%;
+    right: 76px;
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid #303945;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-50%);
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.navbar-discord-link:hover,
+.navbar-discord-link:focus-visible {
+    border-color: #5865f2;
+    background: rgba(88, 101, 242, 0.14);
+    transform: translateY(calc(-50% - 2px));
+}
+
+.navbar-discord-link:focus-visible {
+    outline: 2px solid #aab0ff;
+    outline-offset: 3px;
+}
+
+.navbar-discord-link img {
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
 .footer-link-group {
     display: flex;
     flex-direction: column;
@@ -1092,8 +1130,9 @@ body::after {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 14px;
 }
 
@@ -1110,6 +1149,7 @@ body::after {
 }
 
 .team-grid > .team-card {
+    flex: 0 1 calc((100% - 56px) / 5);
     animation: content-pop-up 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -1158,7 +1198,9 @@ body::after {
 .team-card-with-photo::after {
     position: absolute;
     z-index: -1;
-    inset: 0;
+    inset: -1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: inherit;
     background: linear-gradient(to bottom, rgba(8, 13, 20, 0.16) 20%, rgba(8, 13, 20, 0.55) 100%);
     content: "";
 }
@@ -1247,8 +1289,8 @@ body::after {
         margin-top: 48px;
     }
 
-    .team-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .team-grid > .team-card {
+        flex-basis: calc((100% - 28px) / 3);
     }
 }
 
@@ -1289,8 +1331,11 @@ body::after {
     }
 
     .team-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
+    }
+
+    .team-grid > .team-card {
+        flex-basis: calc((100% - 10px) / 2);
     }
 
     .team-card {
@@ -1306,6 +1351,10 @@ body::after {
 
     .navbar-cart {
         right: 20px;
+    }
+
+    .navbar-discord-link {
+        right: 66px;
     }
 
     .hero-scene {
@@ -1344,6 +1393,17 @@ body::after {
         top: 19px;
         right: 12px;
         transform: none;
+    }
+
+    .navbar-discord-link {
+        top: 19px;
+        right: 58px;
+        transform: none;
+    }
+
+    .navbar-discord-link:hover,
+    .navbar-discord-link:focus-visible {
+        transform: scale(1.08);
     }
 
     .navbar-cart:hover {
@@ -1401,11 +1461,12 @@ body::after {
     }
 
     .showcase-section {
-        padding: 22px 0 28px;
+        padding: 22px 20px 28px;
     }
 
-    .showcase-track {
+    .showcase-group {
         gap: 14px;
+        padding-right: 14px;
     }
 
     .showcase-item {
@@ -1497,6 +1558,10 @@ body::after {
 
     .team-grid {
         gap: 8px;
+    }
+
+    .team-grid > .team-card {
+        flex-basis: calc((100% - 8px) / 2);
     }
 
     .team-card {
