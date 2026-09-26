@@ -19,6 +19,45 @@ window.setInterval(() => {
     window.setTimeout(updateBackground, 320);
 }, 6500);
 
+const showcaseTrack = document.querySelector(".showcase-track");
+
+if (showcaseTrack) {
+    const [firstShowcaseGroup, secondShowcaseGroup] = showcaseTrack.querySelectorAll(".showcase-group");
+
+    if (firstShowcaseGroup && secondShowcaseGroup) {
+        const originalShowcaseItems = [...firstShowcaseGroup.children];
+        let mirroredGroupWidth = 0;
+
+        const updateShowcaseGroups = () => {
+            const showcaseWidth = showcaseTrack.parentElement.clientWidth;
+
+            while (firstShowcaseGroup.getBoundingClientRect().width < showcaseWidth) {
+                originalShowcaseItems.forEach((item) => {
+                    const clone = item.cloneNode(true);
+                    clone.setAttribute("aria-hidden", "true");
+                    clone.querySelector("img")?.setAttribute("alt", "");
+                    firstShowcaseGroup.append(clone);
+                });
+            }
+
+            const groupWidth = firstShowcaseGroup.getBoundingClientRect().width;
+
+            if (groupWidth === mirroredGroupWidth) return;
+
+            secondShowcaseGroup.replaceChildren(...[...firstShowcaseGroup.children].map((item) => {
+                const clone = item.cloneNode(true);
+                clone.setAttribute("aria-hidden", "true");
+                clone.querySelector("img")?.setAttribute("alt", "");
+                return clone;
+            }));
+            mirroredGroupWidth = groupWidth;
+        };
+
+        updateShowcaseGroups();
+        window.addEventListener("resize", updateShowcaseGroups, { passive: true });
+    }
+}
+
 const navbar = document.querySelector(".container-navbar");
 
 if (navbar) {
