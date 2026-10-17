@@ -950,10 +950,10 @@ body::after {
     font-size: 11px;
 }
 
-.navbar-discord-link {
+.navbar-discord-link,
+.navbar-instagram-link {
     position: absolute;
     top: 50%;
-    right: 76px;
     display: grid;
     width: 34px;
     height: 34px;
@@ -962,7 +962,15 @@ body::after {
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.04);
     transform: translateY(-50%);
-    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.navbar-discord-link {
+    right: 76px;
+}
+
+.navbar-instagram-link {
+    right: 118px;
 }
 
 .navbar-discord-link:hover,
@@ -972,12 +980,26 @@ body::after {
     transform: translateY(calc(-50% - 2px));
 }
 
+.navbar-instagram-link:hover,
+.navbar-instagram-link:focus-visible {
+    border-color: #e4405f;
+    background: rgba(228, 64, 95, 0.14);
+    transform: translateY(calc(-50% - 2px));
+    box-shadow: 0 0 12px rgba(228, 64, 95, 0.25);
+}
+
 .navbar-discord-link:focus-visible {
     outline: 2px solid #aab0ff;
     outline-offset: 3px;
 }
 
-.navbar-discord-link img {
+.navbar-instagram-link:focus-visible {
+    outline: 2px solid #ff7597;
+    outline-offset: 3px;
+}
+
+.navbar-discord-link img,
+.navbar-instagram-link img {
     display: block;
     width: 18px;
     height: 18px;
@@ -1374,6 +1396,10 @@ body::after {
         right: 66px;
     }
 
+    .navbar-instagram-link {
+        right: 108px;
+    }
+
     .hero-scene {
         width: 100%;
     }
@@ -1426,8 +1452,16 @@ body::after {
         transform: none;
     }
 
+    .navbar-instagram-link {
+        top: 19px;
+        right: 100px;
+        transform: none;
+    }
+
     .navbar-discord-link:hover,
-    .navbar-discord-link:focus-visible {
+    .navbar-discord-link:focus-visible,
+    .navbar-instagram-link:hover,
+    .navbar-instagram-link:focus-visible {
         transform: scale(1.08);
     }
 
