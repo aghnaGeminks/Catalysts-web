@@ -951,7 +951,8 @@ body::after {
 }
 
 .navbar-discord-link,
-.navbar-instagram-link {
+.navbar-instagram-link,
+.navbar-tiktok-link {
     position: absolute;
     top: 50%;
     display: grid;
@@ -973,6 +974,10 @@ body::after {
     right: 118px;
 }
 
+.navbar-tiktok-link {
+    right: 160px;
+}
+
 .navbar-discord-link:hover,
 .navbar-discord-link:focus-visible {
     border-color: #5865f2;
@@ -988,6 +993,14 @@ body::after {
     box-shadow: 0 0 12px rgba(228, 64, 95, 0.25);
 }
 
+.navbar-tiktok-link:hover,
+.navbar-tiktok-link:focus-visible {
+    border-color: #25f4ee;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(calc(-50% - 2px));
+    box-shadow: -2px 0 8px rgba(37, 244, 238, 0.35), 2px 0 8px rgba(254, 44, 85, 0.35);
+}
+
 .navbar-discord-link:focus-visible {
     outline: 2px solid #aab0ff;
     outline-offset: 3px;
@@ -998,8 +1011,14 @@ body::after {
     outline-offset: 3px;
 }
 
+.navbar-tiktok-link:focus-visible {
+    outline: 2px solid #25f4ee;
+    outline-offset: 3px;
+}
+
 .navbar-discord-link img,
-.navbar-instagram-link img {
+.navbar-instagram-link img,
+.navbar-tiktok-link img {
     display: block;
     width: 18px;
     height: 18px;
@@ -1400,6 +1419,10 @@ body::after {
         right: 108px;
     }
 
+    .navbar-tiktok-link {
+        right: 150px;
+    }
+
     .hero-scene {
         width: 100%;
     }
@@ -1458,10 +1481,18 @@ body::after {
         transform: none;
     }
 
+    .navbar-tiktok-link {
+        top: 19px;
+        right: 142px;
+        transform: none;
+    }
+
     .navbar-discord-link:hover,
     .navbar-discord-link:focus-visible,
     .navbar-instagram-link:hover,
-    .navbar-instagram-link:focus-visible {
+    .navbar-instagram-link:focus-visible,
+    .navbar-tiktok-link:hover,
+    .navbar-tiktok-link:focus-visible {
         transform: scale(1.08);
     }
 
